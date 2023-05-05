@@ -1,0 +1,48 @@
+@mbottom: 10px;
+
+.payPage {
+    &--takemode {
+        margin-bottom: @mbottom;
+        background: #db9973;
+        padding-top: 60px;
+
+        &__content {
+            background: white;
+        }
+    }
+
+    &-payway {
+        background: white;
+        min-height: 100px;
+
+        &__grey {
+            background: #f9f9f9;
+            padding: 15px 6px;
+            font-size: 12px;
+            display: flex;
+
+            &--gold {
+                color: #efb032;
+            }
+
+            &--switch {
+                display: block;
+                margin-left: auto;
+            }
+        }
+    }
+
+    &-popup {
+        &__title {
+            height: 50px;
+            width: 100%;
+            line-height: 50px;
+            font-weight: 800;
+            text-align: center;
+        }
+    }
+}
+
+::v-deep .van-popup {
+    border-radius: 5% 5% 0 0;
+}

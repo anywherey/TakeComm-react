@@ -1,0 +1,110 @@
+@mgb: 20px;
+
+.goodsdetail {
+    &--simpleinfo {
+        margin-bottom: @mgb;
+        background: white;
+        min-height: 100px;
+
+        &__title {
+            display: flex;
+            justify-content: space-between;
+
+            &__left {
+                font-weight: 800;
+                font-size: 17px;
+            }
+        }
+
+        &__sale {
+            color: gray;
+            font-size: 12px;
+        }
+
+        &__choose {
+            padding-top: 10px;
+
+            &__left {
+                color: #f94e42;
+                font-weight: 800;
+                font-size: 18px;
+
+                &__sign {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    &--detail {
+        margin-bottom: @mgb;
+        background: white;
+        min-height: 100px;
+        padding-top: 0;
+
+        &__main {
+            display: flex;
+        }
+
+        &__title {
+            font-size: 14px;
+            color: grey;
+        }
+
+        &__content {
+            width: 50%;
+            font-size: 15px;
+            margin-left: 50px;
+        }
+    }
+
+    &--comment {
+        margin-bottom: @mgb;
+        background: white;
+        min-height: 100px;
+
+        &__title {
+            &__left {
+                font-weight: 600;
+            }
+
+            &__right {
+                font-size: 13px;
+            }
+
+            &__right::after {
+                content: '>';
+            }
+        }
+    }
+
+    &--match {
+        background: white;
+        min-height: 100px;
+    }
+}
+
+.star {
+    color: orange;
+}
+
+::v-deep .van-tab {
+    font-size: 16px;
+    -webkit-flex: 0;
+    flex: 0;
+    -webkit-box-pack: none !important;
+    -webkit-justify-content: none !important;
+    justify-content: none !important;
+    margin-right: 20px;
+    white-space: nowrap;
+}
+
+::v-deep .van-tabs__line {
+    width: 20px;
+    height: 2px;
+    background: linear-gradient(135deg, #ffd000, #ffbd00);
+}
+
+::v-deep .van-tab--active {
+    font-weight: 800;
+}

@@ -1,0 +1,93 @@
+@boxHeight: 55px;
+@bradius: 100px;
+@defaultBG: #020001;
+@widthRight: 20%;
+@boxZindex: 3001;
+
+.bottomShopping {
+    background: white;
+    height: @boxHeight;
+
+    &-box {
+        color: gray;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        bottom: 0;
+        left: 3%;
+        width: 94%;
+        z-index: @boxZindex;
+        height: @boxHeight;
+
+        &__left {
+            width: 80%;
+            height: 100%;
+            background: @defaultBG;
+            border-radius: @bradius 0 0 @bradius;
+            display: flex;
+            align-items: center;
+
+            &--content {
+                margin-left: 25%;
+
+                &--noprice {
+                    &__pricecolumn {
+                        color: white;
+                        margin-right: 10px;
+                    }
+
+                    &__distributioncolumn {
+                        color: gray;
+                        font-size: 13px;
+                        padding-left: 10px;
+                        border-left: 1px solid gray;
+                    }
+                }
+
+                &--price {
+                    color: white;
+                    font-size: 13px;
+                    padding-top: 2px;
+
+                    &__pricecolumn {}
+
+                    &__distributioncolumn {}
+                }
+            }
+        }
+
+        &__right {
+            background: @defaultBG;
+            width: 20%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: @boxZindex;
+            border-radius: 0 @bradius @bradius 0;
+        }
+    }
+
+    &-popup {
+        z-index: 9999 !important;
+
+        &__title {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 35px;
+            font-weight: 600;
+        }
+
+        &__title::before {
+            content: '¥ ';
+            font-size: 20px;
+        }
+
+        &__button {
+            position: fixed;
+            bottom: 20px;
+            left: 5%;
+            width: 90%;
+        }
+    }
+}

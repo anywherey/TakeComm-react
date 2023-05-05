@@ -1,0 +1,47 @@
+@borderBottom:1px solid rgba(170, 170, 170, 0.2);
+@pdbottom:5px;
+.addresscard {
+    max-width: 100%;
+    display: flex;
+    margin-bottom:5px;
+    &__subtitle{
+        color:gray;
+        font-size: 12px;
+        margin-right:10px;
+    }
+    &-main{
+        width: 100%;
+        padding-bottom:@pdbottom;
+        border-bottom: @borderBottom;
+        display: flex;
+        &__left {
+            width:90%;
+            &-top{
+        &--tag {
+            margin-right: 10px;
+        }
+
+        &--address {
+            width: 100%;
+            min-height: 200px;
+            border-radius: 10px;
+        }
+    }
+    }
+    }
+    &-bottom {
+        display: flex;
+        justify-content: space-between;
+    }
+    &-right{
+        margin-left:auto;
+        margin-right:10px;
+    }
+}
+.edit{
+    margin:auto 0;
+    margin-right:10px;
+}
+::v-deep .van-sidebar-item--select::before {
+    background: none;
+}

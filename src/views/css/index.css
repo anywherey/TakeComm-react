@@ -1,0 +1,35 @@
+.payPage--takemode {
+  margin-bottom: 10px;
+  background: #db9973;
+  padding-top: 60px;
+}
+.payPage--takemode__content {
+  background: white;
+}
+.payPage-payway {
+  background: white;
+  min-height: 100px;
+}
+.payPage-payway__grey {
+  background: #f9f9f9;
+  padding: 15px 6px;
+  font-size: 12px;
+  display: flex;
+}
+.payPage-payway__grey--gold {
+  color: #efb032;
+}
+.payPage-payway__grey--switch {
+  display: block;
+  margin-left: auto;
+}
+.payPage-popup__title {
+  height: 50px;
+  width: 100%;
+  line-height: 50px;
+  font-weight: 800;
+  text-align: center;
+}
+::v-deep .van-popup {
+  border-radius: 5% 5% 0 0;
+}

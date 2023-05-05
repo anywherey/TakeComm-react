@@ -2,6 +2,7 @@ import './App.css'
 import Router from '@/router/h5/h5'
 import { HashRouter } from "react-router-dom";
 function App() {
+
   return (
     <>
       <HashRouter>

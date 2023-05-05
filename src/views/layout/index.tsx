@@ -1,13 +1,13 @@
 import { Tabbar } from 'react-vant'
 import { HomeO, SettingO } from '@react-vant/icons'
-import Router from '@/router/h5/h5'
 import {NavLink,Outlet} from "react-router-dom";
 function App() {
   return (
     <>
       <Outlet></Outlet>
       <Tabbar>
-        <Tabbar.Item icon={<HomeO />}><NavLink className='navLink' to="/home">首页</NavLink></Tabbar.Item>
+        <Tabbar.Item icon={<HomeO />}><NavLink className='navLink' to="/home">外卖</NavLink></Tabbar.Item>
+        <Tabbar.Item icon={<HomeO />}><NavLink className='navLink' to="/home">社区</NavLink></Tabbar.Item>
         <Tabbar.Item icon={<SettingO />} ><NavLink className='navLink' to="/my">我的</NavLink></Tabbar.Item>
       </Tabbar>
       {/* {curName}

@@ -1,0 +1,24 @@
+#orderContent {
+  background: white;
+}
+.order {
+  height: 900px;
+  width: 100%;
+}
+.order--sidecontent {
+  height: 900px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.order--sidecontent__index__title {
+  background: white;
+  padding: 5px 0;
+  width: 100%;
+  transition: all 1s;
+}
+::v-deep .van-sidebar-item--select::before {
+  background-color: white;
+}
+.rv-sidebar__content {
+  width: 0;
+}

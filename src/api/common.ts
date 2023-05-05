@@ -1,9 +1,16 @@
 import request from '@/utils/request'
 
-export function login(param:any){
+export function loginAPI(data:any){
     return request({
         url:'/login',
-        method:'get',
-        params:param
+        method:'post',
+        data:data
+    })
+}
+export function registerAPI(data:any){
+    return request({
+        url:'/register',
+        method:'post',
+        data:data
     })
 }

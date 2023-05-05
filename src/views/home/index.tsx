@@ -1,7 +1,8 @@
 
-import Shopcard from '../components/shop-card/index'
+import Shopcard from '@/components/shop-card/index.tsx'
+import { useNavigate, NavigateFunction } from 'react-router-dom';
 
-const home=()=>{
+const Home=()=>{
     const dataSave:object={
         id:1,
         shopName: "蜜雪冰城",
@@ -16,8 +17,11 @@ const home=()=>{
         regionIndex: "广东冰淇淋人气榜第2名",
         promotionIndex: "最高7元无门槛红包",
       };
+      const navigate: NavigateFunction=useNavigate();
       const cardClick=()=>{
-        console.log('111')
+        navigate('/shopDetails',{
+         state:{"shopid":1}
+        })
       }
       const mouseMove=()=>{
         console.log('move')
@@ -29,8 +33,8 @@ const home=()=>{
     return(
         <>
         <div>首页</div>
-        <Shopcard dataSave={dataSave} events={events}></Shopcard>
+        <Shopcard dataSave={dataSave} onClick={cardClick} onMouseMove={mouseMove}></Shopcard>
         </>
     )
 }
-export default home
+export default Home

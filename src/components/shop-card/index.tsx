@@ -2,13 +2,10 @@ import React from 'react'
 import './index.less'
 interface props {
     dataSave:{[key:string]:any},
-    events: {
-        [key: string]: (...args: any[]) => void;
-      };
     }
-const shopCard:React.FC<props>=({dataSave,events})=>{
+const shopCard:React.FC<props&React.HTMLAttributes<HTMLDivElement>>=({dataSave,...rest})=>{
     return (
-            <div  className="shopCard pd16 mg-5" {...events}>
+            <div  className="shopCard pd16 mg-5" {...rest}>
                 <img src="" alt="未查找到图片" />
                 <div className="shopCard_words">
                     <section>

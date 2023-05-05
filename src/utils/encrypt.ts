@@ -1,0 +1,20 @@
+import JSEncrypt from 'jsencrypt'
+
+//公钥
+const publicKey = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCjTzGvJJ8xP2hqwM8P0kNDm0xA6y3146gcdATiviT93RU0SDUoFRAy5scXU/ihl1+qkm8qogfhhrBDhZzvNVpo+vfpsDKI0f/2s6CqxDihluR2JGmyXXhq5WZNzD7MZ7rAY9Xg1+HkAWyMC4q7wFG5yj8lt2ZcDKVTc5p4VjKv2wIDAQAB"
+//私钥
+const privateKey = "MIICWwIBAAKBgQCjTzGvJJ8xP2hqwM8P0kNDm0xA6y3146gcdATiviT93RU0SDUoFRAy5scXU/ihl1+qkm8qogfhhrBDhZzvNVpo+vfpsDKI0f/2s6CqxDihluR2JGmyXXhq5WZNzD7MZ7rAY9Xg1+HkAWyMC4q7wFG5yj8lt2ZcDKVTc5p4VjKv2wIDAQABAoGAWojQ1nPK/RZV4Li7Ed5TA+vYPjUi6aonzH5VJw6am1IxKybMsUfcDxv5S2l18L9mfb1oe44QKGru1MAB3GsLjzvlzvJ/rRqcOshk+46vD1QzMese7Bq4piuApbXpDeMyqwaIiNQi46CKbop5POVRj7cnj00IeDl2FjwFQfoEZaECQQDe4Xn/Wdq5YIHCoXW0GHEVJ9iBT7490TJpuP/7EnURSSxTCW5pR/z8gyRopBb7lfWbk3t6bTssR/kBy8dRkiX/AkEAu5OVbX6+/aQRujxspSzbu6NgLbT5U4Hl5sIfsG52ph4NTpUKbSpvLsBRehdhDR9HUeDNvxpK8TsceuohDoDOJQJAKbYW59QAHBtUjYE8DvVYDHaFjUXIO7dv8Ns/hNRidla0ZeHo+OkRDozYfoDfEDxzV6dVP4c7wMDDeDOT3M82LwJAKGHMcKcxvO8+dcaeaSzwHUQ953knmAfGE9jE87nER1z+5mUFupzBFOKIZ+1ykl2igAkSokqpyac9KWUQOswWFQJAStwOC4o6lfuqlXgPeK2b05Vvg0alunZI7lSyVaI9Ewk0I6o//Apm+94WTfiRTvSDPG6FuEQ8YrtPxQtL4IVhNg=="
+
+
+const encryptor = new JSEncrypt()
+encryptor.setPublicKey(publicKey)
+encryptor.setPrivateKey(privateKey)
+//公钥加密
+export function encrypt(passwd: string) {
+    return encryptor.encrypt(passwd)
+}
+
+//私钥解密
+export function decrypt(passwd: string) {
+    return encryptor.decrypt(passwd)
+}
